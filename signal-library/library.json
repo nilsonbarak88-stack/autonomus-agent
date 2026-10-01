@@ -1,0 +1,24 @@
+{
+  "authored": [
+    {
+      "code": "def score(x):\n    c=x['close']; m=x['market_close']\n    if len(c)<21 or len(m)<21: return 0.0\n    return clamp(-(ret(c,21)-ret(m,21))*8.0)",
+      "created": "2026-10-01",
+      "gains": [
+        0.0065,
+        -0.0149,
+        -0.0008
+      ],
+      "name": "agent_xsec_rev21",
+      "rationale": "21d cross-sectional reversal vs equal-weight market",
+      "status": "rejected",
+      "test_sharpe": -0.27
+    }
+  ],
+  "generated": "2026-10-01T21:20:22.752148+00:00",
+  "retired": [],
+  "schema": "signal-library/v1",
+  "specialists": [],
+  "trial_sharpes": [
+    -0.27
+  ]
+}
